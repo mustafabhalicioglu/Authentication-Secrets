@@ -26,7 +26,9 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-
+//if you took error message related the connection code below, you can try this: 
+  //mongoose.set("strictQuery", true);
+  //mongoose.connect('mongodb://127.0.0.1:27017/userDB');
 mongoose.connect("mongodb://localhost:27017/userDB", {useNewUrlParser: true});
 mongoose.set("useCreateIndex", true);
 
